@@ -19,7 +19,7 @@ output:
 urlcolor: blue 
 ---
 
-```{r}
+```{r, echo=FALSE}
 library(captioner)
 library(tidyverse)
 library(knitr)
@@ -244,9 +244,11 @@ attributes(ah$kqconfidence)$label <- "Sum confidence scores"
 ## 
 __Create and include below a contingency table from `kqconfidence` with raw counts, percentages, and cumulative percentages.__
 
-# Generate frequency table for kqconfidence
 
 ```{r}
+
+# Generate frequency table for kqconfidence
+
 kqtab <- ah %>%
   # filter out respondents who were younger than 15 and so didn't get the questions at all
   filter(h1kq1b!=7 & h1kq2b!=7 & h1kq3b!=7 & h1kq4b!=7 & h1kq5b!=7 & 
